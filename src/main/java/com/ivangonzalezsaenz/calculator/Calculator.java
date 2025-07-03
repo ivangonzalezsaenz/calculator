@@ -1,4 +1,4 @@
-package com.leszko.calculator;
+package com.ivangonzalezsaenz.calculator;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
