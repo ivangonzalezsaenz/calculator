@@ -40,7 +40,7 @@ pipeline {
 
     stage("Docker build") {
       steps {
-        sh "docker build -t ivangonzalezsaenz/calculator ."
+        sh "docker build -t localhost:5000/ivangonzalezsaenz/calculator ."
       }
     }
     stage("Docker push to local registry") {
