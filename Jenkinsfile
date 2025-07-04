@@ -43,5 +43,10 @@ pipeline {
         sh "docker build -t ivangonzalezsaenz/calculator ."
       }
     }
+    stage("Docker push to local registry") {
+      steps {
+        sh "docker push localhost:5000/ivangonzalezsaenz/calculator"
+      }
+    }
   }
 }
