@@ -45,7 +45,9 @@ pipeline {
     }
     stage("Docker push to local registry") {
       steps {
-        sh "docker push localhost:5000/ivangonzalezsaenz/calculator"
+        withCredentials([usernamePassword(credentialsId: 'LOCAL_DOCKER_REGISTRY_CREDENTIALS', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+          sh "echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin localhost:5000"
+          sh "docker push localhost:5000/ivangonzalezsaenz/calculator"
       }
     }
   }
