@@ -23,6 +23,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'junit:junit:4.13'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'io.cucumber:cucumber-java:7.23.0'
+	testImplementation 'io.cucumber:cucumber-junit:7.23.0'
 }
 
 tasks.named('test') {
