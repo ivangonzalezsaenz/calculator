@@ -59,7 +59,7 @@ pipeline {
     stage("Acceptance test") {
       steps {
         sleep 60
-        sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
+        sh "chmod +x acceptance_test.sh && bash ./acceptance_test.sh"
       }
     }
   }
