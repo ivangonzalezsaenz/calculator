@@ -53,7 +53,7 @@ pipeline {
     }
     stage("Deploy to staging") {
       steps {
-        sh "docker run -d --rm -p 8765:8765 --name calculator localhost:5000/ivangonzalezsaenz/calculator"
+        sh "docker run -d --rm -p 8765:8081 --name calculator localhost:5000/ivangonzalezsaenz/calculator"
       }
     }
     stage("Acceptance test") {
