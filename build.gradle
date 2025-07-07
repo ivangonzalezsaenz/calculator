@@ -29,8 +29,14 @@ dependencies {
 	testImplementation 'io.cucumber:cucumber-junit:7.23.0'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+tasks.register('acceptanceTest', Test) {
+  include '**/acceptance/**'
+  systemProperties System.getProperties()
+}
+
+test {
+  useJUnitPlatform()
+  exclude '**/acceptance/**'
 }
 
 jacocoTestCoverageVerification {
