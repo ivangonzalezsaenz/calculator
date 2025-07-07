@@ -32,6 +32,9 @@ dependencies {
 tasks.register('acceptanceTest', Test) {
   include '**/acceptance/**'
   systemProperties System.getProperties()
+
+  testClassesDirs = sourceSets.test.output.classesDirs
+  classpath = sourceSets.test.runtimeClasspath
 }
 
 test {
