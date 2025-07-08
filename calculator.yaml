@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: calculator
-        image: ivangonzalez/calculator:{{VERSION}}
+        image: ivangonzalezsaenz/calculator:caching
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
 
 ---
 
@@ -32,4 +32,4 @@ spec:
   selector:
     app: calculator
   ports:
-  - port: 8080
+  - port: 8081
